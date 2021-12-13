@@ -1,0 +1,22 @@
+<button class="button1" #btn1 (click)="clickButton()">INCREMENT</button><br/><br/>
+{{a}}
+<button class="button2" #btn2>DECREMENT</button>
+
+<input type="text"  placeholder="enter.."  #input1 name="typing"  >
+<button (click)="submitButton(input1.value,input1.placeholder)">Submit</button>
+{{k}}
+{{l}}
+<p>data binding</p>
+<input type="text" name="username" value={{isValue}} readonly={{isReadOnly}} disabled={{isDisabled}} placeholder="enter"/>
+<p>property binding</p>
+<input type="text" name="username" [value]='isValue' [readonly]='isReadOnly' [disabled]='isDisabled' placeholder="enter"/>
+<!-- <button [disabled]='checkDisable()'>Disable</button>
+<button [disabled]='checkEnable()'>Enable</button> -->
+
+<h1 *ngIf="isPassout;then ifBlock else elseBlock">IF-ELSE</h1>
+<ng-template #ifBlock>
+ <h1>Passout</h1>
+</ng-template>
+<ng-template #elseBlock>
+ <h1>4th year</h1>
+</ng-template>
